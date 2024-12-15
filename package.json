@@ -1,0 +1,36 @@
+{
+  "name": "discord-catbox-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot that uploads files to Catbox.moe if they exceed 8MB.",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "deploy": "ts-node src/deploy-commands.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "watch-build": "tsc -w",
+    "deploy-dev": "ts-node-dev --respawn src/deploy-commands.ts"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^2.4.0",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "form-data": "^4.0.1",
+    "multer": "^1.4.5-lts.1",
+    "node-catbox": "^3.3.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/express-serve-static-core": "^5.0.2",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^18.0.0",
+    "@types/node-fetch": "^2.6.12",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
